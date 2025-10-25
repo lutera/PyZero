@@ -28,3 +28,26 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+cd "c:\Users\An\Downloads\Course\Python Zero\python-notebook-project-1"
+
+# optional: clear heavy outputs to keep commits small
+jupyter nbconvert --clear-output --inplace notebooks\*.ipynb
+
+# inspect changes
+git status
+git diff --name-only
+
+# stage only modified notebooks (either specific files or the whole notebooks folder)
+git add notebooks\Assignment1.ipynb notebooks\Session_2_personal.ipynb
+# OR stage all notebooks in folder
+git add notebooks\*.ipynb
+# OR stage tracked modified files only
+git add -u notebooks
+
+# commit
+git commit -m "Update notebooks: short description of changes"
+
+# update local branch with remote (recommended) and push
+git pull --rebase origin main
+git push
